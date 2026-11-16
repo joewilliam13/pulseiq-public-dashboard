@@ -414,6 +414,7 @@ if rate_columns and not attrition_latest.empty:
 
 # -------------------- KPI Cards --------------------
 st.markdown(f"**Reporting month: {latest_month:%B %Y}**")
+st.caption(f"Data cut-off: {(latest_month + pd.offsets.MonthEnd(0)):%d %B %Y}")
 
 k1, k2, k3, k4 = st.columns(4)
 
